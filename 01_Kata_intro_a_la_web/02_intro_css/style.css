@@ -1,6 +1,21 @@
 /* selector */
+body {
+    /* color de fondo  */
+    background-color: black;
+}
 h1  {
  /* propiedad : valor */
-    color: red;
-
+    color: #ffffff; /*color de la etiqueta */ 
+    text-align: center;  /* Alinear el texto */ 
 }
+
+p {
+    color: white;
+    font-size: x-large;
+}
+
+img {
+    height: 200px;  /* altura */ 
+    width: 200px;  /* ancho */ 
+}
+
