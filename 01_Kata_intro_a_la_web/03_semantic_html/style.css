@@ -1,0 +1,26 @@
+
+nav {
+  background: green;
+  color: blue;
+}
+ul {
+  background: red;
+}
+li {
+    background: black;
+}
+section {
+  background: pink;
+}
+div {
+  background: blue;
+}
+p {
+  text-align: center;
+}
+footer {
+  background: black;
+}
+span {
+  color: white;
+}
