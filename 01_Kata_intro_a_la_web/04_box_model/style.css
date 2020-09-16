@@ -1,0 +1,40 @@
+
+h1 {
+    border: black 2px solid;
+    width: 250px;
+    height: 100px;
+    /* magin: es el espacio del borde hacia afuera */
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    /* padding: es el espacio del borde hacia adentro  */
+    padding-left: 10px;
+    /* padding-top: ;
+    padding-right: ;
+    padding-bottom: ; */
+
+}
+
+p {
+    border: #f50707 2px solid;
+    width: 150px;
+    height: 80px;
+     /*      y      x      */
+    margin: 100px 200px ;
+
+}
+
+h2 {
+    border: #ed07f5 2px solid;
+     /*      top rigth  buttom   left               */
+    margin: 20px 100px  50px    80px ;
+}
+
+a {
+    border: #070bf5 2px solid;
+    width: 500px;
+    height: 200px;
+     /*  aplica todo los lados */
+    margin:  20px;
+}
