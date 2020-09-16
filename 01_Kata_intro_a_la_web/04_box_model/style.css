@@ -53,3 +53,8 @@ a {
      /*  aplica todo los lados */
     margin:  20px;
 }
+
+div {
+    border: #f5077e 2px solid;
+    margin-left: 766px;
+}
