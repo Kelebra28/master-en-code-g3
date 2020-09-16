@@ -1,5 +1,19 @@
 
+
+/* 
+    diplay: block -> no te permite poner un elemento a lado
+                   -> te perminte modificar el ancho y la altura
+                
+    display: inline -> te permite tener elementos a lado
+                    -> no te perminte modificar el ancho y la altura
+                    
+    display: inline-block -> te perminte modificar el ancho y la altura y e permite tener elementos a lado           
+
+
+*/
+
 h1 {
+    display: inline-block;
     border: black 2px solid;
     width: 250px;
     height: 100px;
@@ -17,6 +31,7 @@ h1 {
 }
 
 p {
+    display: inline-block;
     border: #f50707 2px solid;
     width: 150px;
     height: 80px;
