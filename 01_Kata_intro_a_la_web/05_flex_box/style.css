@@ -7,7 +7,8 @@
   justify-content: space-around;
  /* acodmoda elementos verticalmente o y  */
   align-items: center;
-flex-direction: column;
+  /* acomoda mis elementos en columna o en fila  */
+  flex-direction: column;
 
 }
 
