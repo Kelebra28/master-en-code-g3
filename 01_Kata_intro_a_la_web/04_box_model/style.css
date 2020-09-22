@@ -54,7 +54,12 @@ a {
     margin:  20px;
 }
 
-div {
-    border: #f5077e 2px solid;
-    margin-left: 766px;
+.rojo {
+    border: #ff0000 2px solid;
+    height: 50px;
+}
+
+.azul{
+    border: #4400ff 2px solid;
+    height: 50px;
 }

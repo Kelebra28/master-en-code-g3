@@ -1,0 +1,23 @@
+
+.padre{
+  border: black 3px solid;  
+  height: 500px;
+  display: flex;
+  /* acomoda elmentos horizontalmente o x */
+  justify-content: space-around;
+ /* acodmoda elementos verticalmente o y  */
+  align-items: center;
+flex-direction: column;
+
+}
+
+.hijo{
+    border: red 3px solid;  
+    height: 100px;
+    width: 100px;
+}
+.hijo2{
+    border: blue 3px solid;  
+    height: 100px;
+    width: 100px;
+}
