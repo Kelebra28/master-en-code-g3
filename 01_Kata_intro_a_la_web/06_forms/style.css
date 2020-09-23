@@ -2,3 +2,7 @@ form {
     border: solid 2px black;
     height: 500px;
 }
+
+fieldset {
+    border-width: 0;
+}
