@@ -6,7 +6,7 @@ var boleano = true;
 var negativo = false;
 
 console.log("Tipo de variables");
-console.info("valor", numerico, typeof numerico);
+console.info("valor " + numerico, typeof numerico);
 console.error("valor", cadena, typeof cadena);
 console.warn("valor", boleano, typeof boleano);
 console.log("valor", negativo, typeof negativo);
