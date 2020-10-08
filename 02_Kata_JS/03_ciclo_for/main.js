@@ -1,7 +1,7 @@
 
 
 // ------------> Estructura <------------
-// for (incio, limite, secuencia) {
+// for (incio; limite; secuencia) {
 //     accion en que mi condicion se cumpla
 // }
 
@@ -17,3 +17,11 @@ for (var i = 0; i <= 10; i -= 1) {
 // 1 -> 1
 // 2 
 // 10 -> 11
+
+
+//------------------> Challenge <-----------------------
+
+// incio limite secuencia 
+//   10  | 1000   |  250
+//   0   | -500   |  -10  
+//  1000 | 0      |  50
