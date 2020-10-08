@@ -1,5 +1,4 @@
 // var nombre = valor 
-
 // valores de en js 
 // --- >number o numerico 
 var numero1 = 10;
@@ -35,7 +34,16 @@ console.log(typeof(pregunta))
 
 
 var preguntaNum = prompt('Ingresa un numero');
-var numerReal = Number(preguntaNum)
+var numerReal = Number(preguntaNum);
 
 console.log(typeof(preguntaNum))
 console.log(typeof(numerReal))
+
+if( typeof(pregunta)  === 'string' ){
+    console.log('Es un nombre real')
+}else{
+    console.error('No ingreses numeros');
+}
+
+
+console.log(numero1.toString())
