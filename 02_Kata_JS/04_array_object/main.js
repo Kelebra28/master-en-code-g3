@@ -2,12 +2,13 @@
 
 // ----------------------->Array o Arreglos<---------------------
 
+
 // posicion     0       1        2       
 var color = ['Azul', 'Verde', 'Naranja'];
 
-console.log(color);
-console.log(color[1]);
-console.log(color[2]);
+// console.log(color);
+// console.log(color[1]);
+// console.log(color[2]);
 
 // -------- Metodos ------
 // .push()
@@ -15,14 +16,14 @@ console.log(color[2]);
 color.push('Negro');
 color.push('Blanco');
 color.push('Rosa');
-console.log(color);
+// console.log(color);
 
 // .pop()
 // Eliminar el ultimo valor
 
 color.pop();
 color.pop();
-console.log(color);
+// console.log(color);
 
 
 //---------------------->Objectos o Objects<-------------------------
@@ -43,10 +44,10 @@ var persona = {
     peliculas: ['RF1', 'RF2', 'RF3', 'RF10']
 };
 
-console.log(persona.edad);
-console.log(persona.nombre);
-console.log(persona.musica.trap.duki)
-console.log(persona.peliculas[2])
+// console.log(persona.edad);
+// console.log(persona.nombre);
+// console.log(persona.musica.trap.duki)
+// console.log(persona.peliculas[2])
 
 
 // Arrglo de objetos
@@ -70,5 +71,4 @@ var animales = [
     }
 ];
 
-console.log(animales[3])
-
+// Van a recorrer un  arreglo y devolver cada elemento de el
