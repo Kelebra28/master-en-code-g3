@@ -25,3 +25,28 @@ for (var i = 0; i <= 10; i -= 1) {
 //   10  | 1000   |  250
 //   0   | -500   |  -10  
 //  1000 | 0      |  50
+
+
+// ------> Fizz Buzz <------
+//  recorrer de 1 -> 100
+// si el numero es divisible entre 3 --> numero + 'fizz'
+// si el numero es divisible entre 5  --> numero + 'buzz'
+// si el numero es divisible entre 3 y 5  --> numero + 'fizzbuzz'
+
+// 1
+// 2
+// 3 fizz
+// 4
+// 5 buzz
+// ...
+// 15 fizzbuzz
+
+
+// 🚫No se hace🚫
+// 15 fizz
+// 15 buzz
+// 15 fizzbuzz
+
+
+
+
