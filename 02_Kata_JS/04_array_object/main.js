@@ -49,6 +49,8 @@ console.log(persona.musica.trap.duki)
 console.log(persona.peliculas[2])
 
 
+// Arrglo de objetos
+
 var animales = [
     {
         nombre: 'Vaca',
@@ -64,9 +66,9 @@ var animales = [
     },
     {
       nombre: 'Murcielago',
-      comida: true
+      comida: true,
     }
-]
+];
 
 console.log(animales[3])
 

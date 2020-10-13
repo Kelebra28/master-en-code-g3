@@ -1,0 +1,34 @@
+[
+    {
+        "nombre": "Ricardo",
+        "edad": 22,
+        "cel": "3465432456",
+        "musica": {
+            "trap": "Duki" 
+        }
+    },
+    {
+        "nombre": "Ana",
+        "edad": 22,
+        "cel": "3465432456",
+        "musica": {
+            "trap": "Duki" 
+        }
+    },
+    {
+        "nombre": "Mikke",
+        "edad": 22,
+        "cel": "3465432456",
+        "musica": {
+            "trap": "Duki" 
+        }
+    },
+    {
+        "nombre": "Carlos",
+        "edad": 15,
+        "cel": "3465432456",
+        "musica": {
+            "trap": "Duki" 
+        }
+    }
+]
