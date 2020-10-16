@@ -72,3 +72,16 @@ var animales = [
 ];
 
 // Van a recorrer un  arreglo y devolver cada elemento de el
+
+
+
+
+
+var color = ['Azul', 'Verde', 'Naranja', 'Negro', 'Blanco'];
+
+
+// 1 donde vamos a empezar
+// 2 cuantos elementos
+// 3 sustituir
+color.splice(1,0, 'XD')
+console.log(color)
