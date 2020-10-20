@@ -1,0 +1,24 @@
+
+
+.my-button {
+    background-color: red;
+    border: none;
+}
+
+.my-button:hover{
+    background-color: black;
+}
+
+.my-btn-modal{
+    background-color: plum ;
+    border: none;
+}
+
+.my-btn-modal:hover{
+    background-color: palevioletred 
+}
+
+.padre {
+    border: 2px solid black;
+
+}
