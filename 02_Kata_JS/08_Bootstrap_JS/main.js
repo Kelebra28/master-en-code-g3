@@ -15,6 +15,11 @@ Eventos de teclado:
 
 var button = document.getElementById('button');
 var input = document.getElementById('input');
+var submit = document.getElementById('submit');
+var form = document.getElementById('form');
+var exampleInputEmail1 = document.getElementById('exampleInputEmail1');
+var exampleInputPassword1 = document.getElementById('exampleInputPassword1');
+var exampleCheck1 = document.getElementById('exampleCheck1');
 
 //Funcion para escuchar cuando le de click mouse
 // button.addEventListener('click', function () { 
@@ -40,16 +45,40 @@ var input = document.getElementById('input');
 // button.addEventListener('mouseenter', funcionDeEntradaDelMouse)
 
 // Funcion para cambiar de colores cuando el mouse entra
-button.addEventListener('mouseenter', function () { 
-  button.classList.replace('green', 'red')
-})
+// button.addEventListener('mouseenter', function () { 
+//   button.classList.replace('green', 'red')
+// })
 
-// Funcion para cambiar de colores cuando el mouse sale
-button.addEventListener('mouseleave', function () {
-  button.classList.replace('red', 'green')
-})
+// // Funcion para cambiar de colores cuando el mouse sale
+// button.addEventListener('mouseleave', function () {
+//   button.classList.replace('red', 'green')
+// })
 
-// Funcion de estar presionando una tecla
-input.addEventListener('keydown', function () {
-   console.log('estoy tecleando.')
- })
+// // Funcion de estar presionando una tecla
+// input.addEventListener('keydown', function () {
+//    console.log('estoy tecleando.')
+//  })
+
+// // Funcion de estar presionando una tecla y saber que tecla es
+// input.addEventListener('keydown', function (event) {
+//   console.log(event.key)
+//   //  console.log('estoy tecleando.')
+//  })
+
+
+// Funcion para validar los campos del formulario antes de enviarlos
+form.addEventListener('submit', function (event) {
+  // Previene las opciones por defecto de el evento, en este caso no envia el formulario ni recarga la pagina
+  event.preventDefault();
+  var input = exampleInputEmail1.value;
+  var password = exampleInputPassword1.value;
+  var check = exampleCheck1.checked
+  console.log(check)
+  // Validacion para ver si existe un elemento.
+  if (!check) {
+    alert('tienes que aceptar los terminos y condiciones')
+  }
+  if  (password === '12345678') {
+    alert('no puede ser tan sencillo')
+  }
+})
