@@ -48,3 +48,7 @@ let saludo = 'hola';
         return a +b
  }
  suma(5, 10)
+ 
+ let num1 = 10
+ let num2 = 10
+ num1 = 500 
