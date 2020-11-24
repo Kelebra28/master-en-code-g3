@@ -24,10 +24,10 @@ const z = '500';
 //*------Spread Operator
 
 let frutas = ['sandia', 'melon', 'platano'];
-
+// let spreadFrutas = (...frutas) =>
 console.log(frutas);
 console.log(...frutas)
-console.log('sadia', 'melon', 'platano')
+// console.log('sadia', 'melon', 'platano')
 
 //*-----  String Template
 
@@ -40,7 +40,14 @@ let saludo = 'hola';
 
  console.log(`${saludo}, ${name}, como estas?`);
  console.log('🔥');
+ console.log("hola como estan \n" +
+"espero que esten bien \n" +
+"jaja \n ")
 
+console.log(`hola como estan
+espero que esten bien 
+jaja
+`)
 
  // *----- Arrow fuction o funciones de flecha
 
