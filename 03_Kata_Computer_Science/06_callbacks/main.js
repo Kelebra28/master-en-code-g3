@@ -21,3 +21,8 @@ timer(suma, 300000000);
 timer(() => {
   console.log('hey yo soy el callback')
 }, 300000000)
+
+
+setTimeout(() => {
+  console.log('hey yo soy el callback')
+}, 1000)
