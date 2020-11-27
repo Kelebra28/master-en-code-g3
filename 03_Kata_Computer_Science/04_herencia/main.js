@@ -24,10 +24,9 @@ class Perrito extends Mascota {
     }
 };
 
-
-
 const Perrito1 = new Perrito('Misha', 4, 'cafe');
-
 console.log(Perrito1)
 console.log(Perrito1.comer())
 console.log(Perrito1.ladran())
+
+//Crear 3 subclases de difentes macotas :) 
