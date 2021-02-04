@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("Este es un CLG");console.log("Buenas...")})();
