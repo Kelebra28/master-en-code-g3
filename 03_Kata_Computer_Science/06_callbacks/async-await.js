@@ -1,8 +1,6 @@
 
 // ------ callback-----
 
-const { fuchsia } = require("color-name")
-
 const pedirUsuarioC = (req, res) => {
 
     // -> tarda en hacer
