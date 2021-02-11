@@ -1,5 +1,6 @@
-$primary_color: red; /* Esta es una variable en sass */
+@import "./variables/variables.scss";
+@import "./parrafos/parrafos.scss";
 
-body{
-  background: $primary_color;
+body {
+  background-color: $primary-color;
 }

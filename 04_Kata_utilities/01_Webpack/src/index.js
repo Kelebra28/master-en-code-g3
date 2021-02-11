@@ -1,7 +1,7 @@
 // // JS VANILLA
 // const saludo = require('./saludo');
-
 // ECMA
+
 import './styles/style.scss';
 import saludo from './saludo';
 
