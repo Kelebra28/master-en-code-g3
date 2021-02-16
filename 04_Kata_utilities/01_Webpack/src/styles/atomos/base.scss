@@ -1,0 +1,39 @@
+$color_primary: red;
+$color_secudary: blue;
+$color_hijos: green;
+$color_hijas: pink;
+$color_nietos: violet;
+$color_nietas: gold;
+
+
+
+@mixin tamanio_nietes {
+    width: 30%;
+    height: 30%;
+    border: 2px solid; 
+}
+
+@mixin tamanio_hijes {
+    width: 30%;
+    height: 30%;
+    border: 2px solid; 
+}
+
+@mixin tamanio_padres {
+    width: 40vw;
+    height: 80vh;
+    border: 2px solid; 
+}
+
+@mixin horizontal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin veritcal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

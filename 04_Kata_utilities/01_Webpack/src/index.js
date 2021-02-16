@@ -3,9 +3,9 @@
 // ECMA
 
 import './styles/style.scss';
-import saludo from './saludo';
+// import saludo from './saludo';
 
-console.log('Este es un CLG');
+// console.log('Este es un CLG');
 
-const respuesta = saludo('Buenas...');
-console.log(respuesta);
+// const respuesta = saludo('Buenas...');
+// console.log(respuesta);

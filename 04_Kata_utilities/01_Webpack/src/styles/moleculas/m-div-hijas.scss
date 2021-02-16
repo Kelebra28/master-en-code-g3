@@ -1,0 +1,7 @@
+@import '../atomos/base.scss';
+
+.hija{
+    @include tamanio_hijes;
+    border-color: $color_hijas;
+   @include veritcal;
+}

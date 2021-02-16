@@ -1,0 +1,7 @@
+@import '../atomos/base.scss';
+
+.hijo{
+    @include tamanio_hijes;
+    border-color: $color_hijos;
+    @include horizontal;
+}

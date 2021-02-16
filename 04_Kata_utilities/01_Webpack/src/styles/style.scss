@@ -1,6 +1,8 @@
-@import "./variables/variables.scss";
-@import "./parrafos/parrafos.scss";
+@import './atomos/atomo.scss';
+@import './moleculas/moleculas.scss';
+@import './organizmo/organizmo.scss';
+
 
 body {
-  background-color: $primary-color;
+    @include horizontal;
 }

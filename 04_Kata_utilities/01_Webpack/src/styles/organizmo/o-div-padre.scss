@@ -1,0 +1,7 @@
+@import '../atomos/base.scss';
+
+.padre {
+    @include tamanio_padres;
+    @include veritcal;
+    border-color: $color_primary;
+}

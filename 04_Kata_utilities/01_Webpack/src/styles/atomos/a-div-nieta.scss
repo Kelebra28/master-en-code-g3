@@ -1,0 +1,6 @@
+@import './base.scss';
+
+.nieta{
+  @include tamanio_nietes;
+  border-color: $color_nietas;
+}

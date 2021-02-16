@@ -1,0 +1,8 @@
+@import '../atomos/base.scss';
+
+
+.madre {
+    @include tamanio_padres;
+    border-color: $color_secudary;
+    @include horizontal;
+}
