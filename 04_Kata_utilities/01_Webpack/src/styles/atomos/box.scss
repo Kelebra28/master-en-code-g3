@@ -1,0 +1,6 @@
+@import './base.scss';
+
+@include box_general(verde);
+@include box_general(azul, dos, 2);
+@include box_general(verde, tres, 3);
+@include box_general(azul, cuatro, 4);
