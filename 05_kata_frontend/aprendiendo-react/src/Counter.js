@@ -18,7 +18,8 @@ constructor(props){
 render(){
     return (
         <>
-        <h1>Hola es mi contador </h1>
+        {/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
+        <h1>{this.props.title}</h1>
         </>
     )
 }
