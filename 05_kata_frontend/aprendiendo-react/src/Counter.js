@@ -30,6 +30,11 @@ render(){
             Sumar
         </button>
         <h4>{this.state.cout}</h4>
+        <button onClick={()=> { 
+            this.setState( {cout : this.state.cout - 1 } )
+        } } >
+            Restar
+        </button>
         </>
     )
 }
