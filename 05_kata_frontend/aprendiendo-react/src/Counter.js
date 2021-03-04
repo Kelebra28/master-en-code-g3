@@ -41,40 +41,46 @@ class Counter extends React.Component {
 							title="Sumar" 
 							miFuncion={this.setMyState} 
 							myCount={count + 1}
+							myState="count"
 						/>
 					<h4>{count}</h4>
 						<Button 
 							title="Restar" 
 							miFuncion={this.setMyState} 
 							myCount={count - 1}
+							myState="count"
 						/>
 					<br/>
 						<Button 
 							title="Reset" 
 							miFuncion={this.setMyState} 
 							myCount={0}
+							myState="count"
 						/>
 				</>
 				<> {/* Esto es un Fragment */}
 					{/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
 					<h1>{title} numero 2</h1>
-					<button 
-						onClick={()=> this.setMyState("count2", count2 + 1)} 
-					>
-						Sumar
-					</button>
+						<Button 
+							title="Sumar" 
+							miFuncion={this.setMyState} 
+							myCount={count2 + 1}
+							myState="count2"
+						/>
 					<h4>{count2}</h4>
-					<button 
-						onClick={()=> this.setMyState("count2", count2 - 1)}
-					>
-						Restar
-					</button>
+						<Button 
+							title="Restar" 
+							miFuncion={this.setMyState} 
+							myCount={count2 - 1}
+							myState="count2"
+						/>
 					<br/>
-					<button 
-						onClick={()=> this.setMyState("count2", 0)} 
-					>
-						Reset
-					</button>
+						<Button 
+							title="Reset" 
+							miFuncion={this.setMyState} 
+							myCount={0}
+							myState="count2"
+						/>
 				</>
 			</>
 		)
