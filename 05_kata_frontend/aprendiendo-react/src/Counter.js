@@ -25,11 +25,14 @@ render(){
         {/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
         <h1>{this.props.title}</h1>
         <button onClick={()=> { 
-            this.setState( {cout : this.state.cout + 1 } )
-        } } >
+            this.setState({cout : this.state.cout + 1})
+        }}>
             Sumar
         </button>
         <h4>{this.state.cout}</h4>
+        <button onClick={() =>{
+            this.setState({cout: this.state.cout -1 })
+        }} >Restar</button>
         </>
     )
 }
