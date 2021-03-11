@@ -53,19 +53,17 @@ function App() {
           {/* Adentro de Switch siempre va ir la Route */}
           {/* Creacion de Rutas por path */}
             {/* Cuanto entren al path "/" deber de pintar el componente home */}
-          <Route exact path="/">
+          <Route exact strict sensitive path={["/", "/home", "/inicio", "/hola"]}>
             <Home/>
           </Route>
+            {/* Usando la propiedad component, solo necesito mandarle como estoy importando el componente */}
+          <Route exact path="/page/about" component={About} />
             {/* Cuanto entren al path "/404" deber de pintar el componente NotFound */}
-          <Route exact path="/page/about">
-            <About/>
-          </Route>
-          <Route exact path="/404">
-            <NotFound/>
-          </Route>
+            {/*  Usando la propiedad Render, tenemos que enviarle el componente como una funcion */}
+          <Route exact path="/404" render={() => <NotFound/>} />
           {/* Redirect si no existe la ruta adonde quiero ir, y este
           seria mi default del switch y siempre va a el final*/}
-          <Redirect to="/404"/>
+          <Redirect push to="/404"/>
         </Switch>
       </div>
     </Router>
