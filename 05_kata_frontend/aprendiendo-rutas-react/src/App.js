@@ -8,11 +8,7 @@ import {
 } from 'react-router-dom'
 
 import Home from './Home';
-
-const NotFound = () => 
-<div>
-  <h2> 404 Not Found </h2>
-</div>;
+import NotFound from './NotFound'
 
 function About() {
   return <h2>About page</h2>;
