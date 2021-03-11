@@ -9,11 +9,33 @@ import {
 
 import Home from './Home';
 
-const NotFound = () => <h2>404 Not Found</h2>;
+const NotFound = () => 
+<div>
+  <h2> 404 Not Found </h2>
+</div>;
 
 function About() {
   return <h2>About page</h2>;
 }
+
+const NavBar = () => (
+<nav>
+  <ul>
+    <li>
+      <Link to="/">Home</Link>
+    </li>
+    <li>
+      <Link to="/page/about">About</Link>
+    </li>
+    <li>
+      <Link to="/users">Users</Link>
+    </li>
+    <li>
+      <a href="http:/page/about" target="_blank" rel="noopener noreferrer"> Afuera</a>
+    </li>
+  </ul>
+</nav>
+);
 
 function App() {
   // Ejemplo de componente switch explicado a metodo JS
@@ -30,30 +52,14 @@ function App() {
     // Si voy a usar react router dom, el primer componente que voy a a llamar va hacer <Router />
     // Router me va a permitir detectar las URL's
     <Router>
-  
+      <NavBar/>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/page/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-            <li>
-              <a href="http:/page/about" target="_blank" rel="noopener noreferrer"> Afuera</a>
-            </li>
-          </ul>
-        </nav>
         {/* Switch  me va permitir identicar las URL y pintar el componente adecuado */}
         <Switch>
           {/* Adentro de Switch siempre va ir la Route */}
           {/* Creacion de Rutas por path */}
             {/* Cuanto entren al path "/" deber de pintar el componente home */}
-          <Route exact strict sensitive path={["/", "/home", "/inicio", "/hola"]}>
+          <Route exact sensitive path={["/", "/home", "/inicio", "/hola"]}>
             <Home/>
           </Route>
             {/* Usando la propiedad component, solo necesito mandarle como estoy importando el componente */}
