@@ -1,11 +1,14 @@
 import React from 'react';
-import Header from '../components/Header';
-import logo from '../assets/img/logo.svg';
+import Layout from '../components/Layout';
 
 
 const Home = () => {
     return(
-        <Header logo={logo}/>
+    <Layout>
+        <div>
+          hola estoy en el home
+        </div>
+    </Layout>
     )
 }
 
