@@ -3,8 +3,7 @@ import Layout from '../components/Layout';
 
 
 
-const Blog = () => {
-  return(
+const Blog = () => 
     <Layout>
       <div>
         hola estoy en el blog
@@ -13,7 +12,5 @@ const Blog = () => {
         soy otro componente
       </div>
     </Layout>
-  )
-}
 
 export default Blog;

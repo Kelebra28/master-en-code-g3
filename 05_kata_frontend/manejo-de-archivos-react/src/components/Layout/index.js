@@ -1,16 +1,19 @@
 import React from 'react';
 import Header from '../Header';
+import Footer from '../Footer';
+
 import logo from '../../assets/img/logo.svg';
 
-const Layout = ({children}) => {
-  console.log(children)
+const Layout = ({children, noHome}) => {
+  const suma = 2 + 2;
   return (
-    <> 
-      <Header logo={logo} />
+    <>
+      {noHome ? undefined : <Header logo={logo} /> }
         <div>
           {children}
         </div>
-      <Header />
+          { suma}
+      <Footer />
     </>
   )
 }
