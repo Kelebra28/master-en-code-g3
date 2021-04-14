@@ -22,7 +22,6 @@ class HolaMundoClass extends Component {
       3000
     )
   }
-  
 
   render() {
     console.log('RENDER')
