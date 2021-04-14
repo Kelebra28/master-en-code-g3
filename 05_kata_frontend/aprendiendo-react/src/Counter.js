@@ -4,39 +4,83 @@
 // --> El componente y el archivo se deben llamar igual
 // --> Exportar el componente
 
-import React from 'react';
+import { Component } from 'react';
+import Button from './Button';
 
-class Counter extends React.Component {
+class Counter extends Component {
+	constructor(props){
+		// El constructor recibe como argumento las propiedades -> props
+		// Atributos asignados cuando llamamos el componente en un componente padre
+		super(props);
+		this.state = {
+				count: parseInt(props.init),
+				count2: props.secondary
+		}
+	}
 
+	// Funcion para modificar mis estados
+	// Modifico los estados de mis componentes con su llave (nombre del estado)
+	// Y su valor (el valor que quiera que tenga mi estado)
+	setMyState = (myState, number) => {
+		console.log(number)
+		this.setState({
+			[myState]: number,
+		})
+	};
 
-constructor(props){
+	render(){
+		const { count, count2 } = this.state
+		const { title } = this.props;
+        // const title2 = this.props.title
 
-    // El constructor recibe como argumento las propiedades -> props
-    // Atributos asignados cuando llamamos el componente en un componente padre
-    super(props);
-    this.state = {
-        cout: parseInt(props.init)
-    }
-}
-
-render(){
-    return (
-        <>
-        {/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
-        <h1>{this.props.title}</h1>
-        <button onClick={()=> { 
-            this.setState({cout : this.state.cout + 1})
-        }}>
-            Sumar
-        </button>
-        <h4>{this.state.cout}</h4>
-        <button onClick={() =>{
-            this.setState({cout: this.state.cout -1 })
-        }} >Restar</button>
-        </>
-    )
-}
-
+		return (
+			<>
+				<> {/* Esto es un Fragment */}
+					{/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
+                    {/* {let x =  10} -> no devuelve un valor   */ } 
+					<h1>{title} numero 1 </h1>
+						<Button 
+							title="Sumar" 
+							miFuncion={this.setMyState} 
+							myCount={count + 1}
+						/>
+					<h4>{count}</h4>
+						<Button 
+							title="Restar" 
+							miFuncion={this.setMyState} 
+							myCount={count - 1}
+						/>
+					<br/>
+						<Button 
+							title="Reset" 
+							miFuncion={this.setMyState} 
+							myCount={0}
+						/>
+				</>
+				<> {/* Esto es un Fragment */}
+					{/* En jsx la apertura de llaves significa que habra codigo de js que devolvera un valor */}
+					<h1>{title} numero 2</h1>
+					<button 
+						onClick={()=> this.setMyState("count2", count2 + 1)} 
+					>
+						Sumar
+					</button>
+					<h4>{count2}</h4>
+					<button 
+						onClick={()=> this.setMyState("count2", count2 - 1)}
+					>
+						Restar
+					</button>
+					<br/>
+					<button 
+						onClick={()=> this.setMyState("count2", 0)} 
+					>
+						Reset
+					</button>
+				</>
+			</>
+		)
+	}
 }
 
 export default Counter;
