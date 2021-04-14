@@ -10,6 +10,7 @@ import HolaMundo from './components/HolaMundo';
 
 import './App.css';
 import CicloDeVida from './components/CicloDeVida';
+import Characters from './components/Characters';
 
 const NotFound = () => {
   return <h2> Not Found </h2>
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/class" component={HolaMundoClass}/>
             <Route exact path="/notFound" render={() => <NotFound/>} />
             <Route exact path="/lifeCycle" component={CicloDeVida} />
+            <Route exact path="/characters" component={Characters} />
 
             <Redirect push to="/notFound" />
           </Switch>
