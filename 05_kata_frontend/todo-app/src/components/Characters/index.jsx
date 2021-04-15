@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 class Character extends Component {
   render() {
+    const {name, image} = this.props.character;
+    console.log(name)
     return (
       <>
-        <h2>nombre: rick </h2>
-        <img src="https://rickandmortyapi.com/api/character/avatar/671.jpeg" alt="rick"/>
+        <h2>nombre: {name} </h2>
+        <img src={image} alt="rick"/>
       </>
     )
   }
-}
+};
 
 class Characters extends Component {
   constructor(props) {
@@ -19,22 +21,21 @@ class Characters extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('https://rickandmortyapi.com/api/character/1')
+  fetchApi = () => {
+    fetch(`https://rickandmortyapi.com/api/character/${Math.floor(Math.random() * 671)+1}`)
       .then(response => response.json())
       .then(data => this.setState({ characters: [ ...this.state.characters, data] }));
   }
 
+  componentDidMount() {
+    this.fetchApi();
+  }
+
   componentDidUpdate(prevProps, prevState) {
-    console.log(3, 'El estado o las props han cambiado');
-    // console.log('prevProps', prevProps);
-    console.log('prevState', prevState);
     if (this.state.characters !== prevState.characters) {
       setTimeout(() => {
-        fetch('https://rickandmortyapi.com/api/character/2')
-          .then(response => response.json())
-          .then(data => this.setState({ characters: [ ...this.state.characters, data] }));
-      }, 10000);
+        this.fetchApi();
+      }, 1000);
     }
   }
 
@@ -43,8 +44,11 @@ class Characters extends Component {
     return (
       <>
         <h1> Lista de personajes: </h1>
+
+        {this.state.characters.map(
+          (character) => <Character character={character}/>)
+        }
           
-        <Character />
       </>
     );
   }
