@@ -13,6 +13,7 @@ import CicloDeVida from './components/CicloDeVida';
 import Characters from './components/Characters';
 import CouterHook from './components/HolaMundo/Counter'
 import CharactersHook from './components/Characters/CharactersHooks'
+import Reloj from './components/RelojWithHooks';
 
 const NotFound = () => {
   return <h2> Not Found </h2>
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/lifeCycle" component={CicloDeVida} />
             <Route exact path="/characters" component={Characters} />
             <Route exact path="/counterHook" component={CouterHook} />
+            <Route exact path="/relojWithHook" component={Reloj} />
             <Route exact path="/characterHook" component={CharactersHook} />
 
             <Redirect push to="/notFound" />

@@ -1,65 +1,47 @@
-import { useEffect, useState,  useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-const  Character = (character) => {
-    const {name, image} = character;
-    console.log(name)
-    return (
-      <>
-        <h2>nombre: {name} </h2>
-        <img src={image} alt={name}/>
-      </>
-    )
-};
+const Character = (character) => {
+    const {name, image} = character.character;
 
-const  Characters = () =>  {
-
-     const [characters, setCharacter] = useState({})
-     
-     const  usePrevious =(value, initialValue) => {
-        const ref = useRef();
-        useEffect(() => {
-          ref.current = value;
-        });
-        if (ref.current === undefined && initialValue !== undefined) {
-          return initialValue;
-        }
-        return ref.current;
-      }
-     const fetchApi = () => {
-        fetch('https://rickandmortyapi.com/api/character/1')
-        .then(response => response.json())
-        .then(data => setCharacter(data));
-     }
-    
-    useEffect(() => {
-       
-        console.log();
-        // fetchApi()
-        // if (characters !== prevState.characters) {
-        //     setTimeout(() => {
-        //       fetchApi()
-        //     }, 1000);
-        //   }
-    })
-    console.log(characters)
-    return (
-      <>
-        <h1> Lista de personajes: </h1>
-
-        {/* {characters.map(
-          (character) => <Character character={character}/>)
-        } */}
-          
-      </>
+    return(
+        <>
+            <h2>nombre: {name}</h2>
+            <img src= {image} alt="{name}"/>
+        </>
     );
-  }
+}
 
-//   componentDidUpdate(prevProps, prevState) {
-//     if (this.state.characters !== prevState.characters) {
-//       setTimeout(() => {
-//         this.fetchApi();
-//       }, 1000);
-//     }
-//   }
+const CharacterHook = () => {
+    const [ characters, setCharacter ] = useState([])
 
-export default Characters;
+    const fetchApi = () => {
+      fetch(`https://rickandmortyapi.com/api/character/${Math.floor(Math.random() * 671)+1}`)
+        .then(response => response.json())
+        .then(data => setCharacter([...characters, data]));
+    }
+
+    useEffect(() => {
+        fetchApi();
+    }, [])
+
+    useEffect(() => {
+        setTimeout( () => {
+            fetchApi();
+        },10000)
+    });
+
+    return (
+        <>
+            <h1>
+                Lista de personajes:
+            </h1> 
+            
+          
+            {characters.map(
+                (character, index) => <Character character={character} key={`charakter${index}`}/>
+            )}
+        </>
+    );
+}
+
+export default CharacterHook;
