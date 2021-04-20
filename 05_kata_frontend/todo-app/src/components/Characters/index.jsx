@@ -7,7 +7,7 @@ class Character extends Component {
     return (
       <>
         <h2>nombre: {name} </h2>
-        <img src={image} alt="rick"/>
+        <img src={image} alt={name}/>
       </>
     )
   }

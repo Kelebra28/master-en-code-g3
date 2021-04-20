@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const HolaMundo = ({texto}) => {
-  const [newTexto, setTexto] = useState(texto)
+  const [newTexto, setNewTexto] = useState(texto)
 
   return (
     <>
@@ -10,7 +10,7 @@ const HolaMundo = ({texto}) => {
       <input
         placeholder="cambia el texto"
         type="text"
-        onChange={ (e) => setTexto(e.target.value)}
+        onChange={ (e) => setNewTexto(e.target.value)}
       />
     </>
   );
