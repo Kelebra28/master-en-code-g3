@@ -8,7 +8,7 @@ const CreateTodo = (props) => {
 
     return (
         <div>
-            <input type="text" placeholder="Agrega un texto" onChange={e => setNewTodo(e.target.value)}/>
+            <input type="text" placeholder="Agrega una meta" onChange={e => setNewTodo(e.target.value)}/>
             <button type="button" onClick={() => {props.addTodo(newTodo)}}>Agregar</button>
         </div>
     )
@@ -25,7 +25,7 @@ const Todos = () => {
         },
         {
             text: 'Kata JS',
-            isComplete: true
+            isComplete: false
         }
     ])
 
@@ -46,6 +46,11 @@ const addTodo = (todoText) => {
     setTodos(myTodos)
 }
 
+const deleteTodos = (index) => {
+    const myTodos = [...todos]
+    myTodos.splice(index, 1)
+    setTodos(myTodos)
+}
     return(
         <>
         <h1>Todos App</h1>
@@ -58,6 +63,7 @@ const addTodo = (todoText) => {
                     text={todo.text}
                     isComplete={todo.isComplete}
                     setComplete={setComplete}
+                    delete={deleteTodos}
                 />
             })
         }

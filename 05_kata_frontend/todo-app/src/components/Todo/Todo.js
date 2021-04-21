@@ -2,15 +2,13 @@
 
 const Todo = (props) => {
 
-    const showComplete = (isComplete) => {
+    const showCompleted = (isComplete) => {
         return isComplete
-        ? {
-            textDecorationLine : 'line-througth',
-            marginLeft: '20px'
-        }
-        : {
-            marginLeft: '20px'
-        }
+        ? { 
+            textDecorationLine: 'line-through', 
+            marginLeft: '20px',
+          }
+          : { marginLeft: '20px' };
     }
     
     return (
@@ -25,7 +23,7 @@ const Todo = (props) => {
             <input type="checkbox" checked={props.isComplete} onChange={() => {
                 props.setComplete(props.index)
             }}/>
-            <span style={ showComplete(props.isComplete)}>{props.text}</span>
+            <span style={ showCompleted(props.isComplete)}>{props.text}</span>
         </div>
     )
 
