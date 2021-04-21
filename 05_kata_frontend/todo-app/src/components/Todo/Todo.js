@@ -1,4 +1,4 @@
-
+import './Todo.css'
 
 const Todo = (props) => {
 
@@ -12,7 +12,7 @@ const Todo = (props) => {
     }
     
     return (
-        <div>
+        <div className="todo">
             <button
             type="button"
             style={{marginRigth: "10px"}}
