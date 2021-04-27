@@ -15,6 +15,7 @@ import CouterHook from './components/HolaMundo/Counter'
 import CharactersHook from './components/Characters/CharactersHooks'
 import Reloj from './components/RelojWithHooks';
 import Todos from './components/Todo/Todos'
+import Peticiones from './components/Tacos/Peticiones'
 
 const NotFound = () => {
   return <h2> Not Found </h2>
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/relojWithHook" component={Reloj} />
             <Route exact path="/characterHook" component={CharactersHook} />
             <Route exact path= "/todos" component={Todos} />
+            <Route exact path= "/tacos" component={Peticiones} />
 
             <Redirect push to="/notFound" />
           </Switch>
