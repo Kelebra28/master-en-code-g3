@@ -59,4 +59,5 @@ describe('Probando funcionalidades de JEST', () => {
      const string = await reverseStringTwo('Hola');
      expect(string).toBe('aloH');
   });
+  
 });
