@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Voy a realizar un snapshot Realizar excepciones dentro de la captura 1`] = `
+Object {
+  "id": Any<Number>,
+  "name": "Mikee Ramirez",
+}
+`;
+
+exports[`Voy a realizar un snapshot Snapshot de mi objeto json 1`] = `
+Object {
+  "gender": "Male",
+  "id": 1,
+  "name": "Rick Sanchez",
+  "species": "Human",
+  "status": "Alive",
+}
+`;

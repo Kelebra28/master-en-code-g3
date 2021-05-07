@@ -1,13 +1,11 @@
 import axios from 'axios';
 
 export const getDataFromApi = (url) => {
-  const peticion=  axios
-              .get(url)
+  return axios.get(url)
               .then( ({ data: {results} } ) => {
                 return results;
               });
 
-  return peticion;
 };
 
 export const reverseStringTwo = (str) => {

@@ -12,5 +12,8 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }
