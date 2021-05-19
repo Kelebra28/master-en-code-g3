@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSongContext } from './SongContext';
 
-function ListaCanciones({ lista }) {
+function ListaCanciones() {
     // Consumir el contexto y traerlo
     const songGlobalState = useSongContext();
     // console.log(songGlobalState);

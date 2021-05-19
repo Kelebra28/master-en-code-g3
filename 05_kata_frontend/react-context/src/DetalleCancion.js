@@ -3,12 +3,12 @@ import { useSongContext } from './SongContext';
 
 function DetalleCancion() {
     const songGlobalState = useSongContext();
-
+    console.log(songGlobalState.selectedSong);
     return (
         <div>
             <h1>Aquí esta toda la info de la rolita</h1>
             {
-                songGlobalState.selectedSong.title 
+                songGlobalState.selectedSong.title
                 ? 
                     (
                         <div>
