@@ -65,6 +65,19 @@ DELETE FROM table_name;
 -- borrar los registros que cumplan con la condicion
 DELETE FROM table_name WHERE condition;
 
+
+-- Operadores que sirven en la sentencia Where
+Operator	Description
+=	        Igual
+>	        Mayor que 
+<	        Menor que
+>=	        Mayor que  or igual
+<=	        Menor que  or igual
+<> or !=	No es igual
+AND	        Operador logico Y - AND
+OR	        Operador logico O - OR
+NOT	        Negar valores booleanos
+
 -- Traerme todas las columnas y registros de una tabla
 SELECT * FROM table_name;
 
@@ -91,7 +104,7 @@ WHERE id BETWEEN 2 AND 5 LIMIT 3 OFFSET 1;
 SELECT * FROM table_name 
 WHERE condition BETWEEN [menor] AND [mayor];
 
--- Tra los datos de los registros que solicito
+-- Trae los datos de los registros que solicito
 SELECT * FROM table_name 
 WHERE condition IN (n1, n2, ...);
 
@@ -107,3 +120,75 @@ ORDER BY column_name;
 SELECT * FROM table_name 
 ORDER BY column_name DESC;
 
+-- Traeme los valores unicos de la consulta 
+SELECT DISTINCT column_name FROM table_name;
+
+-- Funcionees aritmeticas
+
+-- El valor minimo de la columna
+SELECT min(column_name) FROM table_name;
+
+-- El valor maximo de la columna
+SELECT max(column_name) FROM table_name;
+
+-- Total de registros en una tabla 
+SELECT count(*) FROM table_name;
+
+-- Traer el numero de registros unicos sin incluir datos nullos
+SELECT count(DISTINCT column_name) from table_name;
+
+-- Agrupar querys por columna
+SELECT 
+	column_name,
+	count(*)
+FROM
+	table_name
+GROUP BY 
+	column_name;
+
+-- Sentencias para buscar dentro de una agrupacion
+SELECT 
+	column_name,
+	count(*)
+FROM
+	table_name
+GROUP BY 
+	column_name
+HAVING 
+	condition;
+
+-- Para trabajar con fechas es parecido a trabajar con strings
+SELECT * FROM table_name WHERE condition (column_namee_date < 'YYYY-MM-DD')
+
+-- Para trabajar con zonas horarios, el default es 00:00:00
+SELECT * FROM table_name WHERE condition (column_namee_date > 'YYYY-MM-DD HH:MM:SS')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- SELECT 
+-- 	customer_id
+-- FROM 
+-- 	payment
+-- WHERE
+-- 	amount = min(amount);
